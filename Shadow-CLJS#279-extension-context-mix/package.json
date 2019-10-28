@@ -1,0 +1,9 @@
+{
+  "name": "My-Shadow-CLJS-Extension",
+  "author": "ro6",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "shadow-cljs": "2.8.67"
+  }
+}

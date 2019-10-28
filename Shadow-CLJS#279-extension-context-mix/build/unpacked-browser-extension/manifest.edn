@@ -1,0 +1,23 @@
+;;; Adapted from:
+;;; https://github.com/thheller/shadow-cljs/issues/279#issuecomment-392007641
+
+{:name                    "My-Shadow-CLJS-Extension"
+ :version                 "0.0.1"
+
+ :content-security-policy ["default-src 'self';"
+                           "script-src 'self' 'unsafe-eval';"
+                           "connect-src * data: blob: filesystem:;"
+                           "style-src 'self' data: chrome-extension-resource: 'unsafe-inline';"
+                           "img-src 'self' data: chrome-extension-resource:;"
+                           "frame-src 'self' data: chrome-extension-resource:;"
+                           "font-src 'self' data: chrome-extension-resource:;"
+                           "media-src * data: blob: filesystem:;"]
+
+ :shadow/outputs          {:background     {:init-fn        background/init}
+
+                           :content-script {:init-fn        content-script/init
+
+                                            :chrome/options {:matches ["<all_urls>"]}}}
+
+ :manifest-version        2}
+

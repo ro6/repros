@@ -1,0 +1,5 @@
+{:deps   true
+
+ :builds {:browser-extension {:extension-dir    "build/unpacked-browser-extension"
+                              :compiler-options {:closure-output-charset "US-ASCII"}
+                              :target           :chrome-extension}}}
